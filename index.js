@@ -18,6 +18,7 @@ const port = 5000;
 const serviceAccount = require("./config/burj-khalifa-uae-firebase-adminsdk-u8el3-d79ee20e67.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  databaseURL: process.env.FIRE_DB,
 });
 
 app.get("/", (req, res) => {
