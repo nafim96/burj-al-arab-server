@@ -35,8 +35,6 @@ client.connect((err) => {
       res.send(result.insertedCount > 0);
       console.log(result);
     });
-
-    console.log(newBooking);
   });
 
   app.get("/bookings", (req, res) => {
